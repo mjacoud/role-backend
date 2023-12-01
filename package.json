@@ -8,6 +8,7 @@
     "start": "npm run dev",
     "start:prod": "node build/server.js",
     "tsc":"tsc",
+    "prepare": "npm run tsc" ,
     "build":"npm run dist"
   },
   "author": "",
