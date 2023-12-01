@@ -24,7 +24,7 @@ app.use(compression())
 app.use(cookieParser())
 
 app.use('/getEvents', eventsController.getEvents)
-app.use('/getEventsById', eventsController.getEventById)
+app.use('/getEventById', eventsController.getEventById)
 
 const server = http.createServer(app)
 
