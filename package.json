@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.js.map",
   "scripts": {
-
+    "tsc":"tsc",
     "prepare": "npm run tsc",
-    "build":"tsc",
+    "build":"npm run tsc",
     "start":"node dist/index.js"
 
   },
