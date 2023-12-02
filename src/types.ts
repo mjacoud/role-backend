@@ -6,14 +6,14 @@ export interface EventQuery {
     $gt?: number
   }
   startDate?: {
-    $gte?: Date
-    $lte?: Date
+    $gte?: string
+    $lte?: string
   }
   endDate?: {
-    $gte?: Date
-    $lte?: Date
+    $gte?: string
+    $lte?: string
   }
-  location?: {
+  coordenates?: {
     $geoWithin?: {
       $centerSphere: [number, number]
     }

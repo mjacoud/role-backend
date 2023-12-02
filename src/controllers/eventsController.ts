@@ -9,7 +9,7 @@ const asyncHandler = require('express-async-handler')
 //@acess Private
 
 const getEvents = asyncHandler(async (req: Request, res: Response) => {
-  const { category, startDate, endDate, price, radius, location } = req.body
+  const { category, startDate, endDate, price, radius, coordenates } = req.body
 
   let query: EventQuery = {}
 
@@ -32,10 +32,10 @@ const getEvents = asyncHandler(async (req: Request, res: Response) => {
     query.endDate = { $gte: startDate, $lte: endDate }
   }
 
-  if (location) {
-    query.location = {
+  if (coordenates) {
+    query.coordenates = {
       $geoWithin: {
-        $centerSphere: [location, radius / 3963.2]
+        $centerSphere: [coordenates, radius / 3963.2]
       }
     }
   }
