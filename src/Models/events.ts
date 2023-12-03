@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 
 const EventSchema = new mongoose.Schema({
   imageSrc: String,
+  thumbnailSrc: String,
   title: String,
   description: String,
   coordenates: [Number],

@@ -3,7 +3,6 @@ require('dotenv').config()
 import express from 'express'
 import http from 'http'
 import cookieParser from 'cookie-parser'
-import compression from 'compression'
 import cors from 'cors'
 import mongoose from 'mongoose'
 
@@ -20,7 +19,6 @@ app.use(
 )
 
 app.use(express.json())
-app.use(compression())
 app.use(cookieParser())
 
 app.use('/getEvents', eventsController.getEvents)

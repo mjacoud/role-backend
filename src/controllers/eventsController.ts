@@ -1,8 +1,30 @@
 import { Request, Response } from 'express'
-import { EventQuery } from 'types'
+
 import { EventModel } from '../Models/events'
 
 const asyncHandler = require('express-async-handler')
+
+export interface EventQuery {
+  category?: string
+  price?: {
+    $eq?: number
+    $lte?: number
+    $gt?: number
+  }
+  startDate?: {
+    $gte?: string
+    $lte?: string
+  }
+  endDate?: {
+    $gte?: string
+    $lte?: string
+  }
+  coordenates?: {
+    $geoWithin?: {
+      $centerSphere: [number, number]
+    }
+  }
+}
 
 //@desc Get Events by Search params
 //@route POST /events
