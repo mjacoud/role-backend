@@ -8,7 +8,7 @@ import mongoose from 'mongoose'
 
 const eventsController = require('./controllers/eventsController')
 
-const port = process.env.PORT || 5500
+const port = process.env.PORT || 4500
 
 const app = express()
 
@@ -27,8 +27,12 @@ app.use('/getEventById', eventsController.getEventById)
 const server = http.createServer(app)
 
 server.listen(port, () => {
+  
   console.log(`server running at PORT:${port}`)
 })
-
 mongoose.connect(process.env.MONGO_URL)
 mongoose.connection.on('error', (error: Error) => console.log(error))
+
+/*  "start": "node dist/index.js"
+  "main": "dist/index.js",
+  "types": "dist/index.js.map" */
