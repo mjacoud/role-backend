@@ -1,0 +1,40 @@
+{
+    "aclimação":{
+    "category":"parque",
+    "title":"aclimação",
+    "description":"O Parque da Aclimação é uma área pública de lazer localizada na região central da cidade de São Paulo, Brasil, no bairro da Aclimação, que atualmente conta com uma área de 112 mil metros quadrados e foi inaugurado em 1939. O local foi sede do primeiro zoológico da cidade, fundado em 1892 nas terras do antigo Sítio do Tapanhoin, por Carlos Botelho inspirado no Jardin d’acclimatation, em Paris.[1] O parque foi adquirido pela Prefeitura no ano de sua inauguração, anteriormente pertencia a família de Carlos Botelho. O parque foi tombado em 1986 pelo Conselho de Defesa do Patrimônio Histórico, preocupado com a cessão de áreas do parque à particulares. E seu processo de tombamento pode ser encontrado online no site da Faculdade de Arquitetura e Urbanismo da Universidade de São Paulo. Hoje, área abriga um lago de cerca de 70 mil metros cúbicos de água[2], jardim japonês com espelho d'água, concha acústica, playgrounds, aparelhos de ginástica, pista de cooper e caminhada além de campos de futebol, voleibol e basquetebol. Sua fauna contra com cerca de 85 espécies, com 65 aves como garças, quero-quero, chupim, joão-de-barro, martin-pescador e sabiá-laranjeira. A vegetação local tem áreas ajardinadas com espécies nativas com espécies exóticas e nativas, como o guanandi, jacarandá-mimoso, um extenso eucaliptal e árvores frutíferas como o jaboticabal. Atualmente, o parque recebe de cinco a sete mil pessoas nos fins de semana. Ao contrário dos tempos em que se chamava Jardim da Aclimação e atraía moradores de outros pontos da capital em busca de lazer, hoje a maioria dos seus frequentadores vive no bairro. O parque conta atividades gratuitas como ginástica dançante com músicas contemporâneas, de terças, quintas e sábados das 7h30 às 8h30.[3]",
+    "adress":"Rua Muniz de Sousa, 1.119 - Aclimação, São Paulo - SP, 01534-001",
+    "coordenates":[-23.5634181,-46.6263623],
+    "workingHours":
+    {
+        "monday":["5:00:00","20:00:00"],
+        "tuesday":["5:00:00","20:00:00"],
+        "wednesday":["5:00:00","20:00:00"],
+        "thursday":["5:00:00","20:00:00"],
+        "friday":["5:00:00","20:00:00"],
+        "saturday":["5:00:00","20:00:00"],
+        "sunday":["5:00:00","20:00:00"]
+    },
+    "imageSrc":"/assets/aclimacao.png",
+    "thumbnailSrc":""
+},
+    "água-branca":{
+    "category":"parque",
+    "title":"aclimação",
+    "description":"",
+    "adress":"",
+    "coordenates":"",
+    "workingHours":
+    {
+        "monday":"5:00",
+        "tuesday":"5:00",
+        "wednesday":"5:00",
+        "thursday":"5:00",
+        "friday":"5:00",
+        "saturday":"5:00",
+        "sunday":"5:00"
+    },
+    "imageSrc":"",
+    "thumbnailSrc":""
+}
+}

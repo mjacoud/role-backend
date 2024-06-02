@@ -32,14 +32,13 @@ export interface EventQuery {
 
 const getEvents = asyncHandler(async (req: Request, res: Response) => {
   const { category, startDate, endDate, price, radius, coordenates } = req.body
-  
-  
+
   let query: EventQuery = {}
 
   if (category) {
     query.category = category
   }
-  
+
   if (price == 0) {
     query.price = { $eq: parseInt(price) }
   }
@@ -54,7 +53,7 @@ const getEvents = asyncHandler(async (req: Request, res: Response) => {
     }
     query.endDate = { $gte: startDate, $lte: endDate }
   }
-  
+
   if (coordenates) {
     query.coordenates = {
       $geoWithin: {
@@ -62,15 +61,14 @@ const getEvents = asyncHandler(async (req: Request, res: Response) => {
       }
     }
   }
-  
+
   const events = await EventModel.find(query).lean().exec()
-  
-  console.log(events)
 
   if (!events) {
-    return res.status(400).json({ message: 'No Event Found' })
+    return res.status(400).json({ message: 'No User Found' })
   }
 
+  console.log(query)
 
   res.json(events)
 })
@@ -81,7 +79,7 @@ const getEvents = asyncHandler(async (req: Request, res: Response) => {
 
 const getEventById = asyncHandler(async (req: Request, res: Response) => {
   const { eventId } = req.body
-  
+
   const event = await EventModel.findById(eventId).lean()
 
   if (!event) {

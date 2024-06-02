@@ -20,6 +20,7 @@ app.use(
 
 app.use(express.json())
 app.use(cookieParser())
+app.use(express.static('assets'))
 
 app.use('/getEvents', eventsController.getEvents)
 app.use('/getEventById', eventsController.getEventById)

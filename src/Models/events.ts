@@ -1,15 +1,16 @@
 import mongoose from 'mongoose'
 
 const EventSchema = new mongoose.Schema({
-  imageSrc: String,
-  thumbnailSrc: String,
+  category: String,
   title: String,
   description: String,
+  address:String,
   coordenates: [Number],
-  date:[Number],
-  location: String,
-  category: String,
-  eventSrc: String
+  workingHours:{
+    String:[Number]
+  },
+  imageSrc: String,
+  thumbnailSrc: String,
 })
 
-export const EventModel = mongoose.model('Event', EventSchema)
+export const EventModel = mongoose.model('Event', EventSchema,'parques')
