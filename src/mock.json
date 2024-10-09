@@ -1,40 +1,117 @@
-{
-    "aclimação":{
-    "category":"parque",
-    "title":"aclimação",
-    "description":"O Parque da Aclimação é uma área pública de lazer localizada na região central da cidade de São Paulo, Brasil, no bairro da Aclimação, que atualmente conta com uma área de 112 mil metros quadrados e foi inaugurado em 1939. O local foi sede do primeiro zoológico da cidade, fundado em 1892 nas terras do antigo Sítio do Tapanhoin, por Carlos Botelho inspirado no Jardin d’acclimatation, em Paris.[1] O parque foi adquirido pela Prefeitura no ano de sua inauguração, anteriormente pertencia a família de Carlos Botelho. O parque foi tombado em 1986 pelo Conselho de Defesa do Patrimônio Histórico, preocupado com a cessão de áreas do parque à particulares. E seu processo de tombamento pode ser encontrado online no site da Faculdade de Arquitetura e Urbanismo da Universidade de São Paulo. Hoje, área abriga um lago de cerca de 70 mil metros cúbicos de água[2], jardim japonês com espelho d'água, concha acústica, playgrounds, aparelhos de ginástica, pista de cooper e caminhada além de campos de futebol, voleibol e basquetebol. Sua fauna contra com cerca de 85 espécies, com 65 aves como garças, quero-quero, chupim, joão-de-barro, martin-pescador e sabiá-laranjeira. A vegetação local tem áreas ajardinadas com espécies nativas com espécies exóticas e nativas, como o guanandi, jacarandá-mimoso, um extenso eucaliptal e árvores frutíferas como o jaboticabal. Atualmente, o parque recebe de cinco a sete mil pessoas nos fins de semana. Ao contrário dos tempos em que se chamava Jardim da Aclimação e atraía moradores de outros pontos da capital em busca de lazer, hoje a maioria dos seus frequentadores vive no bairro. O parque conta atividades gratuitas como ginástica dançante com músicas contemporâneas, de terças, quintas e sábados das 7h30 às 8h30.[3]",
-    "adress":"Rua Muniz de Sousa, 1.119 - Aclimação, São Paulo - SP, 01534-001",
-    "coordenates":[-23.5634181,-46.6263623],
-    "workingHours":
-    {
-        "monday":["5:00:00","20:00:00"],
-        "tuesday":["5:00:00","20:00:00"],
-        "wednesday":["5:00:00","20:00:00"],
-        "thursday":["5:00:00","20:00:00"],
-        "friday":["5:00:00","20:00:00"],
-        "saturday":["5:00:00","20:00:00"],
-        "sunday":["5:00:00","20:00:00"]
-    },
-    "imageSrc":"/assets/aclimacao.png",
-    "thumbnailSrc":""
-},
-    "água-branca":{
-    "category":"parque",
-    "title":"aclimação",
-    "description":"",
-    "adress":"",
-    "coordenates":"",
-    "workingHours":
-    {
-        "monday":"5:00",
-        "tuesday":"5:00",
-        "wednesday":"5:00",
-        "thursday":"5:00",
-        "friday":"5:00",
-        "saturday":"5:00",
-        "sunday":"5:00"
-    },
-    "imageSrc":"",
-    "thumbnailSrc":""
-}
-}
+[
+  {
+    "category": "Teatros",
+    "title": "Teatro Municipal de São Paulo",
+    "description": "Um dos mais importantes teatros do Brasil, reconhecido por sua arquitetura imponente e por receber espetáculos de ópera, balé e concertos.",
+    "address": "Praça Ramos de Azevedo, s/n - Centro, São Paulo, SP",
+    "latitude": -23.545253,
+    "longitude": -46.638831,
+    "startDate": "2024-09-01",
+    "endDate": "2024-12-31",
+    "workingHours": [
+      [9, 17],
+      [9, 17],
+      [9, 17],
+      [9, 17],
+      [9, 18],
+      [9, 18],
+      [9, 17]
+    ],
+    "price": 80,
+    "imageSrc": "https://example.com/images/teatro-municipal.jpg",
+    "thumbnailSrc": "https://example.com/thumbnails/teatro-municipal.jpg",
+    "eventSrc": "https://example.com/events/teatro-municipal"
+  },
+  {
+    "category": "Teatros",
+    "title": "Teatro Renault",
+    "description": "Teatro moderno que recebe grandes musicais da Broadway e outras produções renomadas.",
+    "address": "Avenida Brigadeiro Luís Antônio, 411 - Bela Vista, São Paulo, SP",
+    "latitude": -23.556728,
+    "longitude": -46.641920,
+    "startDate": "2024-09-10",
+    "endDate": "2024-12-20",
+    "workingHours": [
+      [14, 22],
+      [14, 22],
+      [14, 22],
+      [14, 22],
+      [14, 23],
+      [14, 23],
+      [14, 22]
+    ],
+    "price": 120,
+    "imageSrc": "https://example.com/images/teatro-renault.jpg",
+    "thumbnailSrc": "https://example.com/thumbnails/teatro-renault.jpg",
+    "eventSrc": "https://example.com/events/teatro-renault"
+  },
+  {
+    "category": "Teatros",
+    "title": "Teatro Alfa",
+    "description": "Teatro moderno que recebe musicais, balés e espetáculos teatrais, localizado na zona sul de São Paulo.",
+    "address": "Rua Bento Branco de Andrade Filho, 722 - Santo Amaro, São Paulo, SP",
+    "latitude": -23.646134,
+    "longitude": -46.704843,
+    "startDate": "2024-09-15",
+    "endDate": "2024-12-30",
+    "workingHours": [
+      [14, 22],
+      [14, 22],
+      [14, 22],
+      [14, 22],
+      [14, 23],
+      [14, 23],
+      [14, 22]
+    ],
+    "price": 90,
+    "imageSrc": "https://example.com/images/teatro-alfa.jpg",
+    "thumbnailSrc": "https://example.com/thumbnails/teatro-alfa.jpg",
+    "eventSrc": "https://example.com/events/teatro-alfa"
+  },
+  {
+    "category": "Teatros",
+    "title": "Teatro Sérgio Cardoso",
+    "description": "Teatro tradicional que recebe peças teatrais, concertos e espetáculos de dança.",
+    "address": "Rua Rui Barbosa, 153 - Bela Vista, São Paulo, SP",
+    "latitude": -23.558024,
+    "longitude": -46.644650,
+    "startDate": "2024-09-20",
+    "endDate": "2024-12-31",
+    "workingHours": [
+      [13, 22],
+      [13, 22],
+      [13, 22],
+      [13, 22],
+      [13, 23],
+      [13, 23],
+      [13, 22]
+    ],
+    "price": 70,
+    "imageSrc": "https://example.com/images/teatro-sergio-cardoso.jpg",
+    "thumbnailSrc": "https://example.com/thumbnails/teatro-sergio-cardoso.jpg",
+    "eventSrc": "https://example.com/events/teatro-sergio-cardoso"
+  },
+  {
+    "category": "Teatros",
+    "title": "Teatro Oficina",
+    "description": "Espaço alternativo e inovador conhecido por suas montagens vanguardistas e arquitetura única.",
+    "address": "Rua Jaceguai, 520 - Bela Vista, São Paulo, SP",
+    "latitude": -23.553283,
+    "longitude": -46.637014,
+    "startDate": "2024-09-05",
+    "endDate": "2024-11-30",
+    "workingHours": [
+      [15, 22],
+      [15, 22],
+      [15, 22],
+      [15, 22],
+      [15, 23],
+      [15, 23],
+      [15, 22]
+    ],
+    "price": 50,
+    "imageSrc": "https://example.com/images/teatro-oficina.jpg",
+    "thumbnailSrc": "https://example.com/thumbnails/teatro-oficina.jpg",
+    "eventSrc": "https://example.com/events/teatro-oficina"
+  }
+]

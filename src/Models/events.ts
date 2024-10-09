@@ -5,12 +5,16 @@ const EventSchema = new mongoose.Schema({
   title: String,
   description: String,
   address:String,
-  coordenates: [Number],
-  workingHours:{
-    String:[Number]
-  },
+  latitude:Number,
+  startDate:String,
+  endDate:String,
+  workingHours: [[Number]],
+  longitude:Number,
+  price:Number,
   imageSrc: String,
   thumbnailSrc: String,
+  eventSrc:String
 })
 
-export const EventModel = mongoose.model('Event', EventSchema,'parques')
+
+export const EventModel = mongoose.model('Event', EventSchema)

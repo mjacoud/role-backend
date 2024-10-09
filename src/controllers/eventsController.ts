@@ -10,67 +10,98 @@ export interface EventQuery {
     $eq?: number
     $lte?: number
     $gt?: number
+    $gte?:number
   }
-  startDate?: {
-    $gte?: string
-    $lte?: string
-  }
-  endDate?: {
-    $gte?: string
-    $lte?: string
-  }
+  $sort?:{price:number}
+  $or?: [
+    {
+      startDate?: {
+        $gte?: Date
+        $lte?: Date
+      }
+    },
+    {
+      endDate?: {
+        $gte?: Date
+        $lte?: Date
+      }
+    },
+    {
+      startDate?: { $lte?: Date }
+      endDate?: { $gte?: Date }
+    }
+  ]
   coordenates?: {
     $geoWithin?: {
-      $centerSphere: [number, number]
+      $centerSphere: [number[],number]
     }
   }
 }
 
 //@desc Get Events by Search params
-//@route POST /events
-//@acess Private
+//@route POST /getEvents
+//@acess Public
 
 const getEvents = asyncHandler(async (req: Request, res: Response) => {
-  const { category, startDate, endDate, price, radius, coordenates } = req.body
+  const { category, startDate, endDate, price, radius,latitude,longitude } = req.body
   
+  console.log('Body recebido:', req.body);
+  console.log('----------------------')
   
   let query: EventQuery = {}
-
+  
   if (category) {
     query.category = category
   }
   
-  if (price == 0) {
-    query.price = { $eq: parseInt(price) }
-  }
-  if (price > 0) {
-    query.price = { $lte: parseInt(price), $gt: 0 }
+  if (price == null) {
+    query.price = { $gte: 0 }
   }
 
-  if (startDate && endDate) {
-    query.startDate = {
-      $gte: startDate,
-      $lte: endDate
-    }
-    query.endDate = { $gte: startDate, $lte: endDate }
+  if (parseInt(price) > 0) {
+    query.price = { $lte: parseInt(price)}
   }
+
+
+  if (startDate && endDate) {
+      query = {
+        $or: [
+          {
+            startDate: {
+              $gte: startDate, 
+              $lte: endDate   
+            }
+          },
+          {
+            endDate: {
+              $gte: startDate,
+              $lte: endDate    
+            }
+          },
+          {
+            startDate: { $lte: startDate },
+            endDate: { $gte: endDate }
+          }
+        ]
+      };
+    }
   
-  if (coordenates) {
+  if (latitude && longitude) {
     query.coordenates = {
       $geoWithin: {
-        $centerSphere: [coordenates, radius / 3963.2]
+        $centerSphere: [[parseFloat(latitude),parseFloat(longitude)], radius / 6378.1]
       }
     }
   }
-  
-  const events = await EventModel.find(query).lean().exec()
-  
-  console.log(events)
 
+  
+  const events = await EventModel.find(query).sort({ price: -1 }).lean().exec()
+  
+  
   if (!events) {
     return res.status(400).json({ message: 'No Event Found' })
   }
-
+  
 
   res.json(events)
 })
