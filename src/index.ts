@@ -5,7 +5,6 @@ import http from 'http'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import mongoose from 'mongoose'
-
 const eventsController = require('./controllers/eventsController')
 
 const port = process.env.PORT || 4500
