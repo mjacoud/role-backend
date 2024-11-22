@@ -1,9 +1,9 @@
 import Redis from "ioredis"
 
 const redisClient = new Redis({
-    host: "redis-11257.c308.sa-east-1-1.ec2.redns.redis-cloud.com", // Endereço do servidor Redis
-    port: 11257,
-    password: "Cnm3g3kjF11BkEFxufup2DXDjHInl8Sq"
+    host: process.env.REDIS_URL, // Endereço do servidor Redis
+    port: Number(process.env.REDIS_PORT),
+    password: process.env.REDIS_PASSWORD
 });
 
 redisClient.on("connect", () => console.log("Redis conectado com sucesso."));
